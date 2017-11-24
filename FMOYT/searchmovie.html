@@ -191,13 +191,9 @@
 				$("#movie-poster").attr('src', data.Poster);
 				$("#movie-rate").html(data.Rated);
 				$("#movie-actors").html(data.Actors);
-				$("#movie-actors").prepend("<strong>Actors: </strong> ");
 				$("#movie-writers").html(data.Writer);
-				$("#movie-writers").prepend("<strong>Writers: </strong> ");
 				$("#movie-director").html(data.Director);
-				$("#movie-director").prepend("<strong>Director: </strong> ");
 				$("#imdb-rating").html(data.imdbRating);
-				$("#imdb-rating").prepend("<i class=\"fa fa-star\" aria-hidden=\"true\"></i> ");
 				$("#movie-plot").html(data.Plot);
 				$("#runtime").html(data.Runtime);
 			});
