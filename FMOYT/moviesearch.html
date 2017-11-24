@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Search a movie</title>
+	<style>
+*{
+  margin:0;
+  padding:0;
+  font:15px Segoe UI Light;
+  outline:0;
+}
+body{background-color:#2d2d2d; color:#fff;}
+#search input{width:473px;}
+#movie{
+  width:1024px;
+  margin:0 auto;
+}
+#movie #left{float:left;}
+#movie #left img{
+  width:200px;
+  margin-right:10px;
+}
+#title{font-size:20px;}
+
+input:hover, input:focus {
+opacity: .7;
+color: #08c;
+border: 1px solid #08c;
+}
+input {
+opacity: 0.5;
+}
+input {
+display: block;
+font-size: 14px;
+width: 220px;
+padding: 3px 3px 5px;
+border-radius: 1px;
+border: 1px solid #333;
+outline: none;
+margin-bottom: 8px;
+}
+
+</style>
+
+</head>
+
+<body>
+<div id="movie">
+  <div id="search">
+    <input type="text" placeholder="Search for a movie" />
+  </div>
+  <div id="left">
+  </div>
+  <div id="right">
+  	<img src="" id="poster" style=" float: left; max-height: 150px; margin-right: 10px; ">
+    <p id="title">Movie Title</p>
+    <p id="year">Year</p>
+    <p id="rating">Rating</p>
+    <p id="actors">Actors</p>
+    <p id="plot">Plot and shit</p>
+  </div>
+</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script>
+$("input").focus();
+$("input").keyup(function(){
+  var movie = $(this).val();
+  $.getJSON("https://www.omdbapi.com/?t="+movie+"&apikey=e46dd41f" +"&r=json",function(data){
+    var poster = data.Poster;
+    var title = data.Title;
+    var year = data.Year;
+    var rating = data.imdbRating;
+    var actors = data.Actors;
+    var plot = data.Plot;
+    $("img").attr("src",poster);
+    $("#title").text(title);
+    $("#year").text(year);
+    $("#rating").text(rating);
+    $("#actors").text(actors);
+    $("#plot").text(plot);
+  });
+});
+	</script>
+
+</body>
+</html>
