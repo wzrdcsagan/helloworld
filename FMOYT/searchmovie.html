@@ -13,7 +13,7 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Stoke|Roboto');
 
 body {
-	background: #000;
+	background: #222;
 	color: #fff;
 	font-family: 'Roboto', sans-serif;
 	text-rendering: optimizeLegibility;
@@ -45,7 +45,6 @@ body {
 	padding: 0;
 }
 .title {
-	font-family: 'Anton', sans-serif;
 	margin-top: .5em;
 	color: #fff;
 	padding: 10px 0 5px 10px;
@@ -73,7 +72,6 @@ body {
 .rate {
 	margin-left: 5px;
 	margin-right: 5px;
-	border: 1px solid #000;
 	padding: 0 3px 0;
 	font-family: 'Stoke', serif;
 	font-weight: bolder;
@@ -85,28 +83,24 @@ body {
 </head>
 
 <body>
-<!-- THIS IS THE NEW PAGE -->
 
-<div class="container">
-	<div class="row">
 		<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
 			<form class="search-form" id="movie-search">
 				<div class="form-group">
 					<label for="">Search your Movie</label>
-					<input type="search" class="form-control" id="movie-name" value="" placeholder="Movie" />
+					<input type="search" class="form-control" id="movie-name" value="" placeholder="Movie">
 				</div>
 			</form>
 		</div>
 
-		<div class="row">
-			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-5 col-xs-offset-3 col-xs-5 " id="filmresults">
+					<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-5 col-xs-offset-3 col-xs-5 " id="filmresults">
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_image">
-					<img class="img-thumbnail" id="movie-poster" src="">
+					<img class="img-thumbnail" id="movie-poster" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTExMzU0ODcxNDheQTJeQWpwZ15BbWU4MDE1OTI4MzAy._V1_SX300.jpg">
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_descr">
-					<h2 class="title" id="movie-title"></h2>
+					<h2 class="title" id="movie-title">Arrival</h2>
 					<div id="movie-title-rate" class="filmdisplayed_descr_rate_genre">
-						<span class="imdb_rating label label-success" id="imdb-rating"></span>
+						<span class="imdb_rating label label-success" id="imdb-rating">8.0</span>
 						<span class="rate" id="movie-rate"></span>
 						<span class="genre" id="movie-genre"></span>
 					</div>
@@ -115,19 +109,16 @@ body {
 						<span id="seasons"></span>
 					</div>
 					<p class="plot" id="movie-plot"></p>
-					<p class="actors" id="movie-actors"></p>
+					<p class="actors" id="movie-actors">Amy Adams, Jeremy Renner, Forest Whitaker, Michael Stuhlbarg</p>
 					<p class="writers" id="movie-writers"></p>
 					<p class="director" id="movie-director"></p>
-					<div class="year" id="movie-year"></div>
+					<div class="year" id="movie-year">2016</div>
 				</div>
 			</div>
-		</div>
+		
 
-	</div>
-</div>
-<!-- THIS IS THE NEW PAGE -->
 
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script>
 $("input").focus();
 $("input").keyup(function(){
@@ -148,6 +139,8 @@ $("input").keyup(function(){
   });
 });
 	</script>
+
+
 
 </body>
 </html>
