@@ -3,166 +3,174 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Search a movie</title>
-	  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 	<style>
 
-/* This is the New Page */
+	/* This is the New Page */
 
-@import url('https://fonts.googleapis.com/css?family=Anton|Stoke|Roboto');
+	@import url('https://fonts.googleapis.com/css?family=Anton|Stoke|Roboto');
 
-body {
-	background: #2d2d2d;
-	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	text-rendering: optimizeLegibility;
-}
-.search-form {
-	padding: 1em;
-}
+	body {
+		background: #2d2d2d;
+		color: #fff;
+		font-family: 'Roboto', sans-serif;
+		text-rendering: optimizeLegibility;
+	}
+	.search-form {
+		padding: 1em;
+	}
 
-.img-thumbnail {
-	padding: 0;
-	border: 0;
-	border-top-right-radius: 0; 
-	border-bottom-right-radius: 0;
-}
+	.img-thumbnail {
+		padding: 0;
+		border: 0;
+		border-top-right-radius: 0; 
+		border-bottom-right-radius: 0;
+	}
 
-.filmdisplayed {
-	background: #1c1c1c;
-	color: #fff;
-	border-radius: 6px;
-	padding: 0;
-}
+	.filmdisplayed {
+		background: #1c1c1c;
+		color: #fff;
+		border-radius: 6px;
+		padding: 0;
+	}
 
-.filmdisplayed_image {
-	padding-left: 0;
-	padding-right: 0;
-	text-align: center;
-}
-.filmdisplayed_descr {
-	padding: 0;
-}
-.title {
-	font-family: 'Anton', sans-serif;
-	margin-top: .5em;
-	color: #fff;
-	padding: 10px 0 5px 10px;
-	margin: 0 0 0;
-	border-top-right-radius: 3px;
-}
-.filmdisplayed_descr_rate_genre {
-	color: #fff;
-	padding-left: 10px;
-	padding-bottom: 7px;
-	margin-bottom: 5px;
-}
-.plot, .actors, .writers, .director, .year, .tv-serie {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.plot, .genre {
-	font-size: 115%;
-}
+	.filmdisplayed_image {
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+	.filmdisplayed_descr {
+		padding: 0;
+	}
+	.title {
+		font-family: 'Anton', sans-serif;
+		margin-top: .5em;
+		color: #fff;
+		padding: 10px 0 5px 10px;
+		margin: 0 0 0;
+		border-top-right-radius: 3px;
+	}
+	.filmdisplayed_descr_rate_genre {
+		color: #fff;
+		padding-left: 10px;
+		padding-bottom: 7px;
+		margin-bottom: 5px;
+	}
+	.plot, .actors, .writers, .director, .year, .tv-serie {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.plot, .genre {
+		font-size: 115%;
+	}
 
-.label {
-	border-radius: 0;
-	font-size: 100%
-}
-.rate {
-	margin-left: 5px;
-	margin-right: 5px;
-	padding: 0 3px 0;
-	font-family: 'Stoke', serif;
-	font-weight: bolder;
-}
+	.label {
+		border-radius: 0;
+		font-size: 100%
+	}
+	.rate {
+		margin-left: 5px;
+		margin-right: 5px;
+		padding: 0 3px 0;
+		font-family: 'Stoke', serif;
+		font-weight: bolder;
+	}
 
-::-webkit-scrollbar {
-    width: 13px;
-}
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-box-shadow: inset 0 0 6px #000;
-    background-color: #000;
-}
-::-webkit-scrollbar-track {
-    background: #353535;
-    border-radius: 0;
-}
-.label-warning {
-	color:black!important;
-}
+	::-webkit-scrollbar {
+		width: 13px;
+	}
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		-webkit-box-shadow: inset 0 0 6px #000;
+		background-color: #000;
+	}
+	::-webkit-scrollbar-track {
+		background: #353535;
+		border-radius: 0;
+	}
+	.label-warning {
+		color:black!important;
+	}
 </style>
 
 </head>
 
 <body>
-<!-- THIS IS THE NEW PAGE -->
+	<!-- THIS IS THE NEW PAGE -->
 
-		<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
-			<form class="search-form" id="movie-search">
-				<div class="form-group">
-					<label for="">Search your Movie</label>
-					<input type="search" class="form-control" id="movie-name" value="" placeholder="Movie" />
-				</div>
-			</form>
-		</div>
-
-			<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-5 col-xs-offset-3 col-xs-5 " id="filmresults">
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_image">
-					<img class="img-thumbnail" id="movie-poster" src="">
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_descr">
-					<h2 class="title" id="movie-title"></h2>
-					<div id="movie-title-rate" class="filmdisplayed_descr_rate_genre">
-						<span class="imdb_rating label label-warning" id="imdb-rating"></span>
-						<span class="genre" id="movie-genre"></span>
-					</div>
-					<div class="tv-serie">
-						<span id="runtime"></span>
-						<span id="seasons"></span>
-					</div>
-					<p class="plot" id="movie-plot"></p>
-					<p class="actors" id="movie-actors"></p>
-					<p class="writers" id="movie-writers"></p>
-					<p class="director" id="movie-director"></p>
-					<div class="year" id="movie-year"></div>
-				</div>
+	<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+		<form class="search-form" id="movie-search">
+			<div class="form-group">
+				<label for="">Search your Movie</label>
+				<input type="search" class="form-control" id="movie-name" value="" placeholder="Movie" />
 			</div>
+		</form>
+	</div>
 
-<!-- THIS IS THE NEW PAGE -->
+	<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-5 col-xs-offset-3 col-xs-5 " id="filmresults">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_image">
+			<img class="img-thumbnail" id="movie-poster" src="">
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_descr">
+			<h2 class="title" id="movie-title"></h2>
+			<div id="movie-title-rate" class="filmdisplayed_descr_rate_genre">
+				<span class="imdb_rating label label-warning" id="imdb-rating"></span>
+				<span class="genre" id="movie-genre"></span>
+			</div>
+			<div class="tv-serie">
+				<span id="runtime"></span>
+				<span id="seasons"></span>
+			</div>
+			<p class="plot" id="movie-plot"></p>
+			<p class="actors" id="movie-actors"></p>
+			<p class="writers" id="movie-writers"></p>
+			<p class="director" id="movie-director"></p>
+			<div class="year" id="movie-year"></div>
+		</div>
+	</div>
+
+	<!-- THIS IS THE NEW PAGE -->
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script>
-$("input").focus();
-$("input").keyup(function(){
-  var movie = $(this).val();
-  $.getJSON("https://www.omdbapi.com/?t="+movie+"&apikey=e46dd41f" +"&r=json",function(data){
-    var poster = data.Poster;
-    var title = data.Title;
-    var year = data.Year;
-    var rating = data.imdbRating;
-    var actors = data.Actors;
-    var genre = data.Genre;
-    var runtime = data.Runtime;
-    var writers = data.Writer;
-    var director = data.Director;
-    var plot = data.Plot;
-    $("img").attr("src",poster);
-    $("#movie-title").text(title);
-    $("#movie-year").text(year);
-    $("#imdb-rating").text(rating);
-    $("#movie-actors").text(actors);
-    $("#movie-genre").text(genre);
-    $("#runtime").text(runtime);
-    $("#movie-director").text(director);
-    $("#movie-writers").text(writers);
-    $("#movie-plot").text(plot);
-  });
-});
+		$("input").focus();
+		$("input").keyup(function(){
+			var movie = $(this).val();
+			$.getJSON("https://www.omdbapi.com/?t="+movie+"&apikey=e46dd41f" +"&r=json",function(data){
+				var poster = data.Poster;
+				var title = data.Title;
+				var year = data.Year;
+				var rating = data.imdbRating;
+				var actors = data.Actors;
+				var genre = data.Genre;
+				var runtime = data.Runtime;
+				var writers = data.Writer;
+				var director = data.Director;
+				var plot = data.Plot;
+				$("img").attr("src",poster);
+				$("#movie-title").html(data.Title);
+				$("#movie-title").addClass("title_bgcolor");
+				$("#movie-title-rate").addClass("title_bgcolor");
+				$("#movie-genre").html(data.Genre);
+				$("#movie-year").html(data.Year);
+				$("#movie-poster").attr('src', data.Poster);
+				$("#movie-rate").html(data.Rated);
+				$("#movie-actors").html(data.Actors);
+				$("#movie-actors").prepend("<strong>Actors: </strong> ");
+				$("#movie-writers").html(data.Writer);
+				$("#movie-writers").prepend("<strong>Writers: </strong> ");
+				$("#movie-director").html(data.Director);
+				$("#movie-director").prepend("<strong>Director: </strong> ");
+				$("#imdb-rating").html(data.imdbRating);
+				$("#imdb-rating").prepend("<i class=\"fa fa-star\" aria-hidden=\"true\"></i> ");
+				$("#movie-plot").html(data.Plot);
+				$("#runtime").html(data.Runtime);
+			});
+		});
 	</script>
 
 </body>
