@@ -116,7 +116,6 @@ body {
 					<h2 class="title" id="movie-title"></h2>
 					<div id="movie-title-rate" class="filmdisplayed_descr_rate_genre">
 						<span class="imdb_rating label label-success" id="imdb-rating"></span>
-						<span class="rate" id="movie-rate"></span>
 						<span class="genre" id="movie-genre"></span>
 					</div>
 					<div class="tv-serie">
@@ -144,12 +143,20 @@ $("input").keyup(function(){
     var year = data.Year;
     var rating = data.imdbRating;
     var actors = data.Actors;
+    var genre = data.Genre;
+    var runtime = data.Runtime;
+    var writers = data.Writer;
+    var director = data.Director;
     var plot = data.Plot;
     $("img").attr("src",poster);
     $("#movie-title").text(title);
     $("#movie-year").text(year);
     $("#imdb-rating").text(rating);
     $("#movie-actors").text(actors);
+    $("#movie-genre").text(genre);
+    $("#runtime").text(runtime);
+    $("#movie-director").text(director);
+    $("#movie-writers").text(writers);
     $("#movie-plot").text(plot);
   });
 });
