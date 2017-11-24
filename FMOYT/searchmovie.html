@@ -22,6 +22,11 @@
 		padding: 1em;
 	}
 
+	div#filmresults {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
 	.img-thumbnail {
 		padding: 0;
 		border: 0;
@@ -132,8 +137,6 @@
 </head>
 
 <body>
-	<!-- THIS IS THE NEW PAGE -->
-
 	<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
 		<form class="search-form" id="movie-search">
 			<div class="form-group">
@@ -143,11 +146,11 @@
 		</form>
 	</div>
 
-	<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-offset-3 col-sm-5 col-xs-offset-3 col-xs-5 " id="filmresults">
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_image">
+	<div class="col-sm-12" id="filmresults">
+		<div class="col-sm-3 filmdisplayed_image">
 			<img class="img-thumbnail" id="movie-poster" src="">
 		</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 filmdisplayed_descr">
+		<div class="col-sm-9 filmdisplayed_descr">
 			<h2 class="title" id="movie-title"></h2>
 			<div id="movie-title-rate" class="filmdisplayed_descr_rate_genre">
 				<span class="imdb_rating label label-warning" id="imdb-rating"></span>
@@ -164,8 +167,6 @@
 			<div class="year" id="movie-year"></div>
 		</div>
 	</div>
-
-	<!-- THIS IS THE NEW PAGE -->
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script>
